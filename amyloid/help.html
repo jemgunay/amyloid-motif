@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amyloid Motif Search</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/amyloid/css/main.css">
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/amyloid/"> [ Amyloid Motif Search ] </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/amyloid/">Home</a></li>
+          <li class="active"><a href="/amyloid/help.html">Help</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    <div class="container-fluid" style="margin-top:80px">
+      <!-- input options -->
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2" id="left-input">
+          <!-- left form -->
+          <div class="well well-lg well-spacing">
+            <h3><u>User Interface</u></h3><br>
+            <p>This tool can be used to search for patterns in protein sequences which are associated with amyloid formation. The top navigation bar can be used to navigate between the tool and its corresponding help page. The tool has two main functions; the ability to search a singular protein sequence for patterns and the ability to search through a batch of protein sequences all at once. Click between the two "Single Search" and "Batch Search" tabs to switch between each function. Each of these functions supports options which can be found directly to the right of the main tabbed inputs. These options allow the user to load an example set of inputs (both for the "Single Search" and "Batch Search" functions), clear the input and output fields and there is also the "Allow Motif Overlap?" checkbox setting which either allows or disallows the sequence search to find motifs which overlap other motifs.</p><br>
+            <p>The "Single Search" function has two input fields, but only one of the two fields must contain input data; the search accepts either a "UniProt Accession Code" or a "FASTA-Formatted Protein Sequence". If both fields contain input data, the "FASTA-Formatted Protein Sequence" field will take priority and the "UniProt Accession Code" field will be ignored. If using the "UniProt Accession Code" field, the input data must be a valid Accession Code which associates with a protein documented on UniProt. If using the "FASTA-Formatted Protein Sequence" field, the input data must be in FASTA format, including a FASTA header line; this can also be retrieved from UniProt. Once input data has been entered and options are set as desired, the sequence can be searched by pressing the "Search" button. This will result in properties of the protein to be outputted below, along with any sequence motif matches the search found in a clear format.</p><br>
+            <p>The "Batch Search" function only has one input field which accepts a list of "UniProt Accession Codes" only, with one code per new line as demonstrated in the image below. By Pressing "Search", the results will be outputted below, with the results of each specified protein grouped clearly together. </p><br>
+            
+            <h3><u>Technical Documentation</u></h3><br>
+            <p>The "UniProt Accession Code" inputs are validated using the <a href="http://www.uniprot.org/">UniProt</a> accession code pattern regular expression, preventing the user from entering a malformed accession code and receiving undesirable results or performance. For the "Single Search" function an error message is displayed to the user when unexpected input is received, prompting the user to modify their inputs. Errors messages are displayed when no input was provided, when an accession code is invalid or when there is a server-side configuration issue preventing the tool from communicating with the Python interface. The inputs have a forgiving format allowing white space surrounding inputs and lower case accession codes making the tool more user-friendly. Throughout the tool, features of importance are represented in a bold font with splashes of colour to guide the user and draw their attention to important information. The search algorithm implements the Prosite pattern using a regular expression to search through protein sequences for amyloid forming regions.</p><br>
+            <p>The tool was developed using Python 2.7, as well as HTML5, CSS3 and JavaScript. The Bootstrap front-end framework was used to design the front-end of the system efficiently and the jQuery library was used to write more elegant dynamic code. It can run offline on local web servers which allow the execution of Python files via CGI (Common Gateway Interface). The 'shebang' line at the top of the two '.py' files must point to the system's Python path and they must have sufficient execution privileges (i.e. chmod 755 on linux based servers).</p>
+          </div>
+        </div>
+        <div class="col-md-offset-2"></div>
+      </div>
+    
+    <footer class="center-text"><p><strong>Amyloid Motif Search - Created by <a href="/">Jem Gunay</a> (2017)</strong></p></footer>
+    
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/amyloid/scripts/main.js"></script>
+  </body>
+</html>

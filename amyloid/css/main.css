@@ -1,0 +1,70 @@
+#left-input {
+	margin-right: 0px;
+}
+
+.btn-success {
+  width: 120px;
+  height: 40px;
+}
+
+#output-container {
+  word-wrap: break-word;
+}
+
+#overlap-input-container {
+  padding-top: 10px;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.fill-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+body {
+    margin-bottom: 55px;
+}
+
+footer {
+  position: fixed;
+  height: 55px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  background-color: #e8e8e8;
+  line-height: 55px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.nav>li>a {
+  color: #4cae4c;
+}
+.nav>li>a:hover {
+  color: #5cb85c;
+  background-color: #e8e8e8;
+}
+.navbar>.container-fluid .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+  color: #dddddd;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 24px;
+}
+
+.navbar>.container-fluid .navbar-brand:hover, .navbar-inverse .navbar-nav>li>a:hover {
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 18px;
+}

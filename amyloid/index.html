@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amyloid Motif Search</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/amyloid/css/main.css">
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/amyloid/"> [ Amyloid Motif Search ] </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/amyloid/">Home</a></li>
+          <li><a href="/amyloid/help.html">Help</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    <div class="container-fluid" style="margin-top:80px">
+      <!-- input options -->
+      <div class="row">
+        <div class="col-md-offset-2 col-md-6" id="left-input">
+          <!-- left form -->
+          <div class="well">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#menu1">Single Search</a></li>
+              <li><a data-toggle="tab" href="#menu2">Batch Search</a></li>
+            </ul>
+            <br>
+            <div class="tab-content">
+              <!-- single search tab -->
+              <div id="menu1" class="tab-pane fade in active">
+                <form>
+                  <div class="form-group">
+                    <label for="accession-input">UniProt Accession Code:</label>
+                    <input type="text" class="form-control" id="accession-input">
+                  </div>
+                  <div class="or-sign center-text"><h1><strong>OR</strong></h1></div>
+                  <div class="form-group">
+                    <label for="fasta-input">FASTA-Formatted Protein Sequence:</label>
+                    <textarea rows="8" class="form-control" id="fasta-input"></textarea>
+                  </div>
+                  <div class="center-text">
+                    <button type="submit" class="btn btn-default btn-success" id="search-btn">Search</button>
+                  </div>
+                </form>
+              </div>
+              <!-- batch search tab -->
+              <div id="menu2" class="tab-pane fade">
+                <form>
+                  <div class="form-group">
+                    <label for="batch-accession-input">List of UniProt Accession Codes (one code per line):</label>
+                    <textarea rows="10" class="form-control" id="batch-accession-input"></textarea>
+                  </div>
+                  <p>Note: Any invalid <strong>Accession Codes</strong> will be silently ignored and will not be visually reported.</p>
+                  
+                  <div class="center-text">
+                    <button type="submit" class="btn btn-default btn-success" id="batch-search-btn">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <!-- right form -->
+          <div class="well">
+            <h3 class="center-text"><strong>Options</strong></h3>
+            <form>
+              <button type="submit" class="btn btn-default fill-button btn-success" id="example-btn">Load Example</button>
+              <button type="submit" class="btn btn-default fill-button btn-success" id="clear-btn">Clear Input</button><br>
+              <button type="submit" class="btn btn-default fill-button btn-success" id="clear-output-btn">Clear Output</button><br>
+              <div class="checkbox" id="overlap-input-container">
+                <label><input type="checkbox" id="overlap-input" checked> Allow Motif Overlap?</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-offset-2"></div>
+      </div>
+      
+      <!-- input options -->
+      <div class="row">
+        <div class="col-md-offset-2 col-md-6 col-md-offset-4" id="output-container">
+          
+        </div>
+      </div>
+    </div>
+    
+    <footer class="center-text"><p><strong>Amyloid Motif Search - Created by <a href="/">Jem Gunay</a> (2017)</strong></p></footer>
+    
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/amyloid/scripts/main.js"></script>
+  </body>
+</html>
